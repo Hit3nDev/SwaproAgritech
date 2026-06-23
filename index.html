@@ -1119,6 +1119,7 @@ em{
   font-weight:500;
 }
 .form-success.visible{opacity:1;height:auto;margin-top:-0.5rem;}
+.form-success.error{color:#C0392B;}
 
 /* contact info panel */
 .contact-info{
@@ -2427,6 +2428,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     <div class="contact-grid">
       <div class="contact-form-panel reveal-up">
         <form class="contact-form" id="contact-form">
+          <input type="hidden" name="access_key" value="46907a16-5b71-4657-beea-7bc464fbb3e9"/>
+          <input type="hidden" name="subject" value="New enquiry from Swapro website"/>
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
           <div class="form-row">
             <label class="form-field">
               <span class="form-label">Name</span>
@@ -2718,11 +2722,34 @@ window.addEventListener('scroll',()=>{
   const form=document.getElementById('contact-form');
   const success=document.getElementById('form-success');
   if(!form||!success) return;
-  form.addEventListener('submit',e=>{
+  const submitBtn=form.querySelector('.submit-btn');
+  const successDefaultText=success.textContent;
+  form.addEventListener('submit',async e=>{
     e.preventDefault();
-    success.classList.add('visible');
-    form.reset();
-    setTimeout(()=>success.classList.remove('visible'),4500);
+    if(submitBtn) submitBtn.disabled=true;
+    success.classList.remove('error');
+    try{
+      const data=new FormData(form);
+      const res=await fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers:{ 'Accept':'application/json' },
+        body:data
+      });
+      const json=await res.json();
+      if(json.success){
+        success.textContent=successDefaultText;
+        success.classList.add('visible');
+        form.reset();
+      } else {
+        throw new Error(json.message||'Submission failed');
+      }
+    } catch(err){
+      success.textContent='✗ Something went wrong — please email us directly at info@swaproagri.com';
+      success.classList.add('visible','error');
+    } finally {
+      if(submitBtn) submitBtn.disabled=false;
+      setTimeout(()=>success.classList.remove('visible'),5500);
+    }
   });
   // floating labels
   form.querySelectorAll('.form-field input, .form-field textarea').forEach(input=>{
