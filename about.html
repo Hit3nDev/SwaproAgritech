@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Us — Swapro</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="scroll-progress"><div id="scroll-progress-bar"></div></div>
+<div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Detail">
+  <button id="lb-close" class="lb-close" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="lb-inner">
+    <div id="lb-content" class="lb-content"></div>
+    <div class="lb-meta">
+      <p id="lb-title" class="lb-title"></p>
+      <p id="lb-desc" class="lb-desc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ PAGE BANNER ══════ -->
+<section class="page-banner">
+  <div class="nav-wrap">
+    <nav class="navbar" id="navbar">
+      <div class="nav-left">
+        <div class="logo-mark">
+          <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png" alt="Swapro logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback'); this.parentElement.textContent='Swapro';" />
+        </div>
+        <div class="nav-links">
+          <a href="index.html#home" data-nav>Home</a>
+          <a href="about.html" data-nav class="active">About Us</a>
+          <a href="seaweed-farming.html" data-nav>Seaweed Farming</a>
+          <a href="products.html" data-nav>Products</a>
+          <a href="projects.html" data-nav>Projects</a>
+          <a href="index.html#contact" data-nav>Contact Us</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="index.html#contact" class="btn-roll btn-dark">
+          <span class="roll-track"><span class="roll-line">Get in touch</span><span class="roll-line">Get in touch</span></span>
+          <span class="arrow-circle arrow-circle-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+      </div>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-sheet">
+      <a href="index.html#home" class="mobile-link" data-nav>Home</a>
+      <a href="about.html" class="mobile-link" data-nav>About Us</a>
+      <a href="seaweed-farming.html" class="mobile-link" data-nav>Seaweed Farming</a>
+      <a href="products.html" class="mobile-link" data-nav>Products</a>
+      <a href="projects.html" class="mobile-link" data-nav>Projects</a>
+      <a href="index.html#contact" class="mobile-link" data-nav>Contact Us</a>
+      <a href="index.html#contact" class="btn-roll btn-dark mobile-start-btn">
+        <span class="roll-track"><span class="roll-line">Start a conversation</span><span class="roll-line">Start a conversation</span></span>
+        <span class="arrow-circle arrow-circle-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container page-banner-text">
+    <p class="page-banner-eyebrow reveal-up">Swapro · Our Story</p>
+    <h1 class="page-banner-title reveal-up">About Us</h1>
+    <p class="page-banner-sub reveal-up">Thirty years of aquaculture roots, one new tide to ride.</p>
+  </div>
+</section>
+
+<!-- ══════ ABOUT ══════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="badge-row"><span class="badge-num">1</span><span class="badge-pill badge-pill-light">Who We Are</span></div>
+    <h2 class="section-heading">Thirty years of roots,<br class="br-desktop"/><span class="sp-mobile"> </span>one new tide to ride.</h2>
+    <div class="about-layout">
+      <div class="about-grid">
+        <p class="about-paragraph">Swapro is a group of people passionate about the seaweed industry and engaged primarily in providing commercial seaweed farming solutions.</p>
+        <p class="about-paragraph">Though we are a startup, our roots come from <strong>Das &amp; Kumar</strong>, our sister concern and one of India's most reputed names in aquaculture with over 30 years of experience in implementing projects for central and state governments, premier research institutes and private companies. Over three decades, the company has executed hundreds of projects across 20 Indian states and 5 countries.</p>
+        <p class="about-paragraph">We wish to replicate the stellar record in the seaweed industry.</p>
+      </div>
+      <div class="about-photo-frame">
+        <img src="https://res.cloudinary.com/dajekho84/image/upload/v1782187886/IMG-20260620-WA0026_rd0mjt.jpg" alt="Swapro seaweed cultivation" />
+      </div>
+    </div>
+
+    <div class="heritage-strip">
+      <div class="heritage-stat"><p class="heritage-num">30+</p><p class="heritage-label">Years of aquaculture experience</p></div>
+      <div class="heritage-stat"><p class="heritage-num">100s</p><p class="heritage-label">Projects executed</p></div>
+      <div class="heritage-stat"><p class="heritage-num">20</p><p class="heritage-label">Indian states covered</p></div>
+      <div class="heritage-stat"><p class="heritage-num">5</p><p class="heritage-label">Countries served</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOUNDERS ══════ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="badge-row reveal-up"><span class="badge-num badge-num-on-dark">2</span><span class="badge-pill badge-pill-on-dark">Leadership</span></div>
+    <h2 class="section-heading heading-on-dark reveal-up">Meet the team.</h2>
+    <div class="founder-grid">
+      <div class="founder-card reveal-up">
+        <div class="founder-avatar">
+          <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782374938/pulkit_qgwr4f.webp" alt="Pulkit, Co-Founder" />
+        </div>
+        <p class="founder-name">Pulkit</p>
+        <p class="founder-role">Co-Founder</p>
+        <p class="founder-bio">Pulkit is a young entrepreneur who has been in the fisheries and aquaculture industry for over 15 years. It is in his blood. He is an active partner in our sister concern — "Das and Kumars" — which is the leading cage and aquaculture infrastructure manufacturing company in the country. With his active role at Das and Kumars, Pulkit has worked in more than 20 Indian states and 3 countries with fisheries departments, research institutes, policy makers and farmers to build a robust aquaculture infrastructure. His ground experience with the Indian marine and fisheries industry is going to be the cornerstone for Swapro's future success. Apart from this, he is an avid traveler and adventurer who loves to explore.</p>
+      </div>
+      <div class="founder-card reveal-up">
+        <div class="founder-avatar">
+          <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782374936/ayush_jain_vb3cdg.webp" alt="Ayush, Co-Founder" />
+        </div>
+        <p class="founder-name">Ayush</p>
+        <p class="founder-role">Co-Founder</p>
+        <p class="founder-bio">Ayush has wide experience in the field of retail and wholesale trade. From wholesaling agri commodities to currently importing robotics and electronic modules, he has developed ground-up experience in business development, strategy, marketing, and branding. He is ever curious and always eager to learn, be it from books, people, or travel.</p>
+      </div>
+      <div class="founder-card reveal-up">
+        <div class="founder-avatar">
+          <img src="https://res.cloudinary.com/dsr1agyxd/image/upload/v1782375014/Vikash-Kumar_zbj4rr.webp" alt="Vikash Kumar, Operations" />
+        </div>
+        <p class="founder-name">Vikash Kumar</p>
+        <p class="founder-role">Operations</p>
+        <p class="founder-bio">Vikash is a UP boy who is the heart of our seaweed operations in Tamil Nadu. He is a go-getter with exceptional "getting things done" skills. In a very short time, he has been able to forge strong relationships with the local fishermen and farmers' community. Currently, he manages more than 100 rafts for smooth cultivation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PARTNERSHIPS & ASSOCIATIONS ══════ -->
+<section class="section section-tint">
+  <div class="container">
+    <div class="badge-row reveal-up"><span class="badge-num">3</span><span class="badge-pill badge-pill-dark">Partnerships</span></div>
+    <h2 class="section-heading reveal-up">Partnerships &amp; Associations</h2>
+    <div class="partnership-strip reveal-up" style="margin-top:0;">
+      <div class="partnership-grid">
+        <div class="partnership-item">
+          <span class="partnership-mark">MoU</span>
+          <p>With CSIR-CSMCRI for research and development in seaweed culture.</p>
+        </div>
+        <div class="partnership-item">
+          <span class="partnership-mark">License</span>
+          <p>Holder for CSMCRI's <em>Kappaphycus alvarezii</em> SAP technical know-how.</p>
+        </div>
+        <div class="partnership-item">
+          <span class="partnership-mark">Partner</span>
+          <p>Preferred technical and execution partner with CMFRI.</p>
+        </div>
+        <div class="partnership-item">
+          <span class="partnership-mark">MoU</span>
+          <p>With Tamil Nadu Dr. J. Jayalalithaa Fisheries University to engage in collaborative understanding and start-up activities in seaweed farming.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="logo-footer">
+      <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png" alt="Swapro logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback'); this.parentElement.textContent='Swapro';" />
+    </span>
+    <p class="footer-copy">© 2026 Swapro. All rights reserved.</p>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

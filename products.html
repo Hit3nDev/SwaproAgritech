@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Products — Swapro</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="scroll-progress"><div id="scroll-progress-bar"></div></div>
+<div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Detail">
+  <button id="lb-close" class="lb-close" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="lb-inner">
+    <div id="lb-content" class="lb-content"></div>
+    <div class="lb-meta">
+      <p id="lb-title" class="lb-title"></p>
+      <p id="lb-desc" class="lb-desc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ PAGE BANNER ══════ -->
+<section class="page-banner">
+  <div class="nav-wrap">
+    <nav class="navbar" id="navbar">
+      <div class="nav-left">
+        <div class="logo-mark">
+          <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png" alt="Swapro logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback'); this.parentElement.textContent='Swapro';" />
+        </div>
+        <div class="nav-links">
+          <a href="index.html#home" data-nav>Home</a>
+          <a href="about.html" data-nav>About Us</a>
+          <a href="seaweed-farming.html" data-nav>Seaweed Farming</a>
+          <a href="products.html" data-nav class="active">Products</a>
+          <a href="projects.html" data-nav>Projects</a>
+          <a href="index.html#contact" data-nav>Contact Us</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="index.html#contact" class="btn-roll btn-dark">
+          <span class="roll-track"><span class="roll-line">Get in touch</span><span class="roll-line">Get in touch</span></span>
+          <span class="arrow-circle arrow-circle-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+      </div>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-sheet">
+      <a href="index.html#home" class="mobile-link" data-nav>Home</a>
+      <a href="about.html" class="mobile-link" data-nav>About Us</a>
+      <a href="seaweed-farming.html" class="mobile-link" data-nav>Seaweed Farming</a>
+      <a href="products.html" class="mobile-link" data-nav>Products</a>
+      <a href="projects.html" class="mobile-link" data-nav>Projects</a>
+      <a href="index.html#contact" class="mobile-link" data-nav>Contact Us</a>
+      <a href="index.html#contact" class="btn-roll btn-dark mobile-start-btn">
+        <span class="roll-track"><span class="roll-line">Start a conversation</span><span class="roll-line">Start a conversation</span></span>
+        <span class="arrow-circle arrow-circle-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container page-banner-text">
+    <p class="page-banner-eyebrow reveal-up">Swapro · Our Product</p>
+    <h1 class="page-banner-title reveal-up">Products</h1>
+    <p class="page-banner-sub reveal-up">Jaltaru — a 100% natural seaweed-based biostimulant for Indian agriculture.</p>
+  </div>
+</section>
+
+<!-- ══════ JALTARU PRODUCT ══════ -->
+<section id="jaltaru" class="section section-white">
+  <div class="container">
+    <div class="badge-row reveal-up"><span class="badge-num">1</span><span class="badge-pill badge-pill-light">Our Product</span></div>
+    <h2 class="section-heading reveal-up">Jaltaru — 100% natural seaweed biostimulant.</h2>
+
+    <div class="jaltaru-grid">
+      <div class="jaltaru-gallery reveal-up" data-parallax="0.08">
+        <div class="jaltaru-gallery-main" id="jaltaru-main-frame" data-lightbox data-lb-title="Jaltaru" data-lb-desc="Jaltaru — a 100% natural seaweed extract biostimulant developed with CSIR-CSMCRI's patented technology.">
+          <img id="jaltaru-main-img" src="https://res.cloudinary.com/dajekho84/image/upload/v1781983117/JaltaruFrontEdited-1024x1024_dqppgl.webp" alt="Jaltaru seaweed biostimulant bottle — front view" />
+        </div>
+        <div class="jaltaru-gallery-thumbs">
+          <div class="jaltaru-thumb is-active" data-img="https://res.cloudinary.com/dajekho84/image/upload/v1781983117/JaltaruFrontEdited-1024x1024_dqppgl.webp">
+            <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781983117/JaltaruFrontEdited-1024x1024_dqppgl.webp" alt="Jaltaru bottle front view" />
+          </div>
+          <div class="jaltaru-thumb" data-img="https://res.cloudinary.com/dajekho84/image/upload/v1781983240/JaltaruSide1Edited-1024x1024_fne7wy.webp">
+            <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781983240/JaltaruSide1Edited-1024x1024_fne7wy.webp" alt="Jaltaru bottle side view one" />
+          </div>
+          <div class="jaltaru-thumb" data-img="https://res.cloudinary.com/dajekho84/image/upload/v1781982887/JaltaruSide2Edited-1024x1024_zzgfgm.webp">
+            <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781982887/JaltaruSide2Edited-1024x1024_zzgfgm.webp" alt="Jaltaru bottle side view two" />
+          </div>
+        </div>
+      </div>
+
+      <div class="jaltaru-content">
+        <div class="jaltaru-name-row reveal-up">
+          <span class="jaltaru-name">Jaltaru</span>
+          <span class="jaltaru-tagline">100% Natural Seaweed-Based Biostimulant</span>
+        </div>
+
+        <p class="jaltaru-paragraph reveal-up">Jaltaru is a 100% natural seaweed extract biostimulant developed with the patented technology of the prestigious CSIR-CSMCRI Institute.</p>
+        <p class="jaltaru-paragraph reveal-up">This seaweed extract is a treasure trove of naturally occurring nutrients required for plant growth. Biostimulants, unlike fertilizers, do not directly provide synthetic nutrients to the plants but instead help the plants better absorb nutrients from the soil itself. When applied alongside fertilizers, it yields truly promising results — while reducing the usage of chemical fertilizers and maintaining soil health.</p>
+        <p class="jaltaru-paragraph reveal-up">Jaltaru contains macro and micro nutrients, growth hormones, soluble proteins, enzymes, and minerals like potassium. It has a high concentration of potash, a vital organic nutrient involved in many metabolic processes in plants. Its prescribed application has resulted in better fruit size, leaf thickness, and stem strength.</p>
+
+        <div class="jaltaru-stat-row reveal-up">
+          <div><p class="jaltaru-stat-num">170+</p><p class="jaltaru-stat-label">Crops, fruits &amp; vegetable varieties tested</p></div>
+          <div><p class="jaltaru-stat-num">20</p><p class="jaltaru-stat-label">Indian states across field trials</p></div>
+          <div><p class="jaltaru-stat-num">20–30%</p><p class="jaltaru-stat-label">Promising growth uplift delivered</p></div>
+        </div>
+
+        <p class="jaltaru-paragraph reveal-up">The product has been comprehensively tested by various ICAR institutes in collaboration with CSIR-CSMCRI on 170+ crop, fruit, vegetable, and plant varieties across 20 states — delivering a promising growth of 20–30%.</p>
+
+        <div class="jaltaru-benefits reveal-up">
+          <div class="jaltaru-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Increases crop yield by 20–30%</div>
+          <div class="jaltaru-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Reduces chemical fertilizer use by 30%</div>
+          <div class="jaltaru-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Maintains and promotes soil health</div>
+          <div class="jaltaru-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Boosts resistance to cold &amp; drought</div>
+          <div class="jaltaru-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Provides pest &amp; disease resistance</div>
+          <div class="jaltaru-benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>100% natural — no chemicals used</div>
+        </div>
+
+        <p class="jaltaru-credit reveal-up">We are extremely grateful to the scientists and researchers at CSIR-CSMCRI for helping us develop an effective, inexpensive, and environmentally conscious biostimulant — a win-win for our farmers and our mother soil.</p>
+
+        <a href="index.html#contact" class="btn-roll btn-accent reveal-up" style="margin-top:1rem;">
+          <span class="roll-track"><span class="roll-line">Get in touch</span><span class="roll-line">Get in touch</span></span>
+          <span class="arrow-circle arrow-circle-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="logo-footer">
+      <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png" alt="Swapro logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback'); this.parentElement.textContent='Swapro';" />
+    </span>
+    <p class="footer-copy">© 2026 Swapro. All rights reserved.</p>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

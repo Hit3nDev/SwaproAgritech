@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Projects — Swapro</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="scroll-progress"><div id="scroll-progress-bar"></div></div>
+<div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Detail">
+  <button id="lb-close" class="lb-close" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="lb-inner">
+    <div id="lb-content" class="lb-content"></div>
+    <div class="lb-meta">
+      <p id="lb-title" class="lb-title"></p>
+      <p id="lb-desc" class="lb-desc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ PAGE BANNER ══════ -->
+<section class="page-banner">
+  <div class="nav-wrap">
+    <nav class="navbar" id="navbar">
+      <div class="nav-left">
+        <div class="logo-mark">
+          <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png" alt="Swapro logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback'); this.parentElement.textContent='Swapro';" />
+        </div>
+        <div class="nav-links">
+          <a href="index.html#home" data-nav>Home</a>
+          <a href="about.html" data-nav>About Us</a>
+          <a href="seaweed-farming.html" data-nav>Seaweed Farming</a>
+          <a href="products.html" data-nav>Products</a>
+          <a href="projects.html" data-nav class="active">Projects</a>
+          <a href="index.html#contact" data-nav>Contact Us</a>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="index.html#contact" class="btn-roll btn-dark">
+          <span class="roll-track"><span class="roll-line">Get in touch</span><span class="roll-line">Get in touch</span></span>
+          <span class="arrow-circle arrow-circle-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        </a>
+      </div>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-sheet">
+      <a href="index.html#home" class="mobile-link" data-nav>Home</a>
+      <a href="about.html" class="mobile-link" data-nav>About Us</a>
+      <a href="seaweed-farming.html" class="mobile-link" data-nav>Seaweed Farming</a>
+      <a href="products.html" class="mobile-link" data-nav>Products</a>
+      <a href="projects.html" class="mobile-link" data-nav>Projects</a>
+      <a href="index.html#contact" class="mobile-link" data-nav>Contact Us</a>
+      <a href="index.html#contact" class="btn-roll btn-dark mobile-start-btn">
+        <span class="roll-track"><span class="roll-line">Start a conversation</span><span class="roll-line">Start a conversation</span></span>
+        <span class="arrow-circle arrow-circle-light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="container page-banner-text">
+    <p class="page-banner-eyebrow reveal-up">Swapro · Track Record</p>
+    <h1 class="page-banner-title reveal-up">Projects</h1>
+    <p class="page-banner-sub reveal-up">Proof, on the water — from Puducherry to Mandapam and beyond.</p>
+  </div>
+</section>
+
+<!-- ══════ PROJECTS ══════ -->
+<section class="section section-white">
+  <div class="container">
+    <div class="badge-row reveal-up"><span class="badge-num">1</span><span class="badge-pill badge-pill-light">Projects</span></div>
+    <h2 class="section-heading reveal-up">Proof, on the water.</h2>
+
+    <div class="project-cards">
+      <article class="project-card reveal-up">
+        <span class="project-tag">Puducherry · with CMFRI</span>
+        <h3 class="project-title">64 HDPE Square Raft Project</h3>
+        <p class="project-body">Successfully implemented the 64 HDPE Square Raft project — the first seaweed cultivation project in Puducherry, under the guidance of CMFRI.</p>
+        <p class="project-body">The project was conceptualized under the Department of Fisheries, Puducherry, with the premier institute CMFRI. We were included as technical and execution partners by CMFRI. We were able to deliver the project successfully within the stipulated timeline. The project has been marked as a major success with the involvement of around 150 fishermen families, and has become a model project to be further expanded and replicated in other areas.</p>
+        <div class="project-stat-row">
+          <span class="project-stat"><strong>150</strong> fishermen families</span>
+          <span class="project-stat"><strong>64</strong> HDPE square rafts</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal-up">
+        <span class="project-tag">Mandapam · with CSIR-CSMCRI</span>
+        <h3 class="project-title">Proprietary Circular HDPE Rafts</h3>
+        <p class="project-body">We helped in developing proprietary circular HDPE-based seaweed rafts with CSIR-CSMCRI Mandapam. It has been successfully tested over multiple cycles with the following benefits:</p>
+        <ul class="project-list">
+          <li>Reduced cultivation cycle (25–30 days vs. 45 days)</li>
+          <li>4–5 times higher yield compared to bamboo rafts</li>
+          <li>Lifespan of ~12 years with minimal maintenance</li>
+          <li>Suitability for round-the-year cultivation and monsoon preservation</li>
+          <li>Potential for co-culture of allied species</li>
+        </ul>
+      </article>
+
+      <article class="project-card reveal-up">
+        <span class="project-tag">Pan-India · Private Sector</span>
+        <h3 class="project-title">Commercial Cultivation Projects</h3>
+        <p class="project-body">We have implemented various cultivation projects with private players in this sunrise seaweed industry.</p>
+      </article>
+    </div>
+
+    <a href="index.html#contact" class="btn-roll btn-accent reveal-up" style="margin-top:3rem;">
+      <span class="roll-track"><span class="roll-line">Get in touch</span><span class="roll-line">Get in touch</span></span>
+      <span class="arrow-circle arrow-circle-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="logo-footer">
+      <img src="https://res.cloudinary.com/dajekho84/image/upload/v1781952631/ChatGPT_Image_Jun_20_2026_04_20_08_PM_fx25of.png" alt="Swapro logo" onerror="this.style.display='none'; this.parentElement.classList.add('logo-fallback'); this.parentElement.textContent='Swapro';" />
+    </span>
+    <p class="footer-copy">© 2026 Swapro. All rights reserved.</p>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
