@@ -71,24 +71,10 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 })();
 
 /* ══════════════════════════════════════════════════════════
-   4. MAGNETIC CURSOR DOT + MAGNETIC BUTTONS
+   4. MAGNETIC BUTTONS
 ══════════════════════════════════════════════════════════ */
 (function(){
-  const dot=document.getElementById('cursor-dot');
-  if(!dot||window.matchMedia('(max-width:1023px)').matches) return;
-  let mx=0,my=0,cx=0,cy=0;
-  window.addEventListener('mousemove',e=>{ mx=e.clientX; my=e.clientY; dot.classList.add('active'); });
-  window.addEventListener('mouseleave',()=>dot.classList.remove('active'));
-  function rafLoop(){
-    cx+=(mx-cx)*0.14; cy+=(my-cy)*0.14;
-    dot.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;
-    requestAnimationFrame(rafLoop);
-  }
-  rafLoop();
-  document.querySelectorAll('.gallery-media,.btn-roll,.partner-badge,.photo-frame,.fuss-photo,.news-feature').forEach(el=>{
-    el.addEventListener('mouseenter',()=>dot.classList.add('cursor-grow'));
-    el.addEventListener('mouseleave',()=>dot.classList.remove('cursor-grow'));
-  });
+  if(window.matchMedia('(max-width:1023px)').matches) return;
   document.querySelectorAll('.btn-roll').forEach(btn=>{
     btn.addEventListener('mousemove',e=>{
       const r=btn.getBoundingClientRect();
