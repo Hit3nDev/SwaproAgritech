@@ -71,22 +71,6 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 })();
 
 /* ══════════════════════════════════════════════════════════
-   4. MAGNETIC BUTTONS
-══════════════════════════════════════════════════════════ */
-(function(){
-  if(window.matchMedia('(max-width:1023px)').matches) return;
-  document.querySelectorAll('.btn-roll').forEach(btn=>{
-    btn.addEventListener('mousemove',e=>{
-      const r=btn.getBoundingClientRect();
-      const bx=e.clientX-r.left-r.width/2;
-      const by=e.clientY-r.top-r.height/2;
-      btn.style.transform=`translate(${bx*.22}px,${by*.22}px)`;
-    });
-    btn.addEventListener('mouseleave',()=>btn.style.transform='');
-  });
-})();
-
-/* ══════════════════════════════════════════════════════════
    5. GALLERY TILT + LIGHTBOX
 ══════════════════════════════════════════════════════════ */
 (function(){
@@ -167,22 +151,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 })();
 
 /* ══════════════════════════════════════════════════════════
-   7. RIPPLE CLICK EFFECT
-══════════════════════════════════════════════════════════ */
-(function(){
-  if(prefersReducedMotion) return;
-  document.addEventListener('click',e=>{
-    if(e.target.closest('a,button,input,textarea,select')) return;
-    const rip=document.createElement('div');
-    rip.className='water-ripple';
-    rip.style.cssText=`left:${e.clientX}px;top:${e.clientY}px`;
-    document.body.appendChild(rip);
-    rip.addEventListener('animationend',()=>rip.remove());
-  });
-})();
-
-/* ══════════════════════════════════════════════════════════
-   8. ACTIVE NAV + BACK-TO-TOP + NAVBAR SCROLL STATE
+   7. ACTIVE NAV + BACK-TO-TOP + NAVBAR SCROLL STATE
 ══════════════════════════════════════════════════════════ */
 (function(){
   const navbar=document.getElementById('navbar');
